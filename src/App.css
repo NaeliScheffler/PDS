@@ -1,38 +1,83 @@
+/* Define o container principal */
 .App {
-  text-align: center;
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilo base da sidebar */
+.sidebar {
+  background-color: #62C21E; /* Verde conforme solicitado */
+  color: white;
+  height: 100vh;
+  padding: 20px 10px;
+  transition: width 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Sidebar aberta */
+.sidebar.open {
+  width: 250px;
+}
+
+/* Sidebar fechada */
+.sidebar.closed {
+  width: 70px;
+}
+
+/* Botão para abrir/fechar o menu */
+.menu-toggle {
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 30px;
+}
+
+/* Logo/texto superior */
+.logo-text {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Menu de navegação */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Itens do menu */
+.nav-item {
   color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover nos itens */
+.nav-item:hover {
+  background-color: #58ad1a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Área de conteúdo ao lado */
+.content {
+  padding: 30px;
+  flex-grow: 1;
 }
+
+/*logo menu hamburguer*/
+.clean_agro_logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  object-fit: cover; 
+}
+
