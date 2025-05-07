@@ -5,21 +5,15 @@ possível proporcionar um acompanhamento técnico personalizado, substituindo o 
 
 Colaboradores: Fernando Neiverth, Naeli Scheffler, Manoele Mohr, Mateus Nicolodi, Taís Graminho e Tiago Soares. 
 
-## Comando para iniciar os containeres do projeto (na raiz)
-`docker-compose -f infra/compose/dev.yml build --no-cache`
-`docker-compose -f infra/compose/dev.yml up -d`
-
 frontend/vite.config.js precisa estar corretamente configurado com o endereço onde está rodando o backend
 
 # frontend/:
-React + Vite
+uma aplicação React com Vite
 
 # backend/
 ORM prisma
-NestJs
 
 # infra/:
 arquitetura docker para:
 - container com banco postgres do projeto
 - container com nginx para subir o frontend
-- container com nginx para subir o backend
