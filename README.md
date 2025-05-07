@@ -5,3 +5,18 @@ possível proporcionar um acompanhamento técnico personalizado, substituindo o 
 
 Colaboradores: Fernando Neiverth, Naeli Scheffler, Manoele Mohr, Mateus Nicolodi, Taís Graminho e Tiago Soares. 
 
+frontend/vite.config.js precisa estar corretamente configurado com o endereço onde está rodando o backend
+
+# frontend/:
+uma aplicação React com Vite
+
+# backend/
+ORM prisma
+
+# infra/:
+arquitetura docker para:
+- container com banco postgres do projeto
+- container com nginx para subir o frontend
+
+`docker-compose -f infra/compose/dev.yml build --no-cache`
+`docker-compose -f infra/compose/dev.yml up -d`
