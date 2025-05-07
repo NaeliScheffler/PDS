@@ -17,3 +17,6 @@ ORM prisma
 arquitetura docker para:
 - container com banco postgres do projeto
 - container com nginx para subir o frontend
+
+`docker-compose -f infra/compose/dev.yml build --no-cache`
+`docker-compose -f infra/compose/dev.yml up -d`
